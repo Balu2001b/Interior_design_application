@@ -129,7 +129,7 @@
 
    
     height: 40px;
-    width: fit-content;
+    width: 100px;
     margin-left: 100px;
     margin-top: -10px;
     
@@ -201,15 +201,7 @@
         margin-top: 75px;
     }
 
-    .image-section img{
-
-       
-        height: 40px;
-    width: fit-content;
-    margin-left: 100px;
-    margin-top: -10px;
-       
-    }
+ 
     .budget-container{
 
     
