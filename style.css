@@ -185,3 +185,26 @@
     text-align: start;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+@media only screen and (max-width: 600px) {
+
+    .container{
+
+        margin-left: -10px;
+        border: none;
+
+    }
+
+    .image-section{
+
+        margin-top: 75px;
+    }
+
+    .down-section{
+
+        position: fixed;
+        bottom: 0;
+    }
+
+}
