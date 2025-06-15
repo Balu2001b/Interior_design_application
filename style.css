@@ -203,7 +203,12 @@
 
     .image-section img{
 
-        margin-left: 100px;
+       
+        height: 40px;
+    width: fit-content;
+    margin-left: 100px;
+    margin-top: -10px;
+       
     }
     .budget-container{
 
