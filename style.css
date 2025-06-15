@@ -191,7 +191,7 @@
 
     .container{
 
-        margin-left: -10px;
+        margin-left: -8px;
         border: none;
 
     }
@@ -199,6 +199,17 @@
     .image-section{
 
         margin-top: 75px;
+    }
+
+    .image-section img{
+
+        margin-left: 100px;
+    }
+    .budget-container{
+
+    
+        height: auto;
+        margin-left: 10px;
     }
 
     .down-section{
