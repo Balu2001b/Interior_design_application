@@ -9,6 +9,7 @@
     height: 844px;
     width: 390px;
     margin-left: 480px;
+    background-color: rgb(255, 255, 255);
 
 
 }
@@ -103,25 +104,15 @@
 
 
 /*--------------------Image section styling here-----------------------------*/
-.image-section{
 
-    border: 1px solid #ccc;
-    height: 80px;
-    width: 300px;
-    margin-left: 50px;
-    margin-top: 60px;
-    border-radius: 10px;
-     box-shadow: 0 6px 5px rgba(0, 0, 0, 0.1);
-
-}
 .image-section p{
 
-    margin-top: 10px;
-    text-align: center;
-    color: black;
-    font-size: 10px;
-
-    
+    margin-top: 60px;
+    margin-left: 80px;
+    font-size: 12px;
+    color: red;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -130,8 +121,10 @@
    
     height: 40px;
     width: 100px;
-    margin-left: 100px;
+   object-fit: fill;
+   margin-left: 140px;
     margin-top: -10px;
+    
     
 }
 
@@ -150,7 +143,7 @@
     height: 150px;
     width: 370px;
     margin-left: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
     box-shadow: 5px 5px 5px rgb(209, 209, 209);
@@ -164,7 +157,8 @@
     text-align: center;
     font-size: 16px;
     margin-top: 0;
-    color: #151B54;
+    color: red;
+    font-weight: 700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -173,7 +167,9 @@
     font-size: 12px;
     margin-top: 0;
     margin-left: 5px;
-    color: black;
+    text-align: center;
+    color: #151B54;
+    letter-spacing: 0.8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -186,6 +182,105 @@
     text-align: start;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+/*--------------------quality section styling here-----------------------------*/
+
+.quality-container{
+
+    height: 420px;
+    width: 370px;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 5px rgb(209, 209, 209);
+
+
+}
+
+.quality-container h1{
+
+    text-align: center;
+    font-size: 16px;
+    margin-top: 0;
+    color: red;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quality-container h2{
+
+    font-size: 12px;
+    margin-top: 0;
+    margin-left: 5px;
+    text-align: center;
+    color: #151B54;
+    letter-spacing: 0.8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quality-container h3{
+
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: 400;
+    text-align: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.quality-container h4{
+
+    font-size: 12px;
+    margin-top: 0px;
+    margin-left: 10px;
+    font-weight: 600;
+    text-align: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.adhesives{
+
+    height: 90px;
+    width: 160px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+.plywood{
+
+    height: 90px;
+    width: 160px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+
+.hardware{
+
+    height: 90px;
+    width: 160px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+
+.laminates{
+
+    height: 90px;
+    width: 160px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+
 
 
 @media only screen and (max-width: 600px) {
