@@ -491,15 +491,33 @@ body.modal-open {
 
 }
 
-
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 430px) {
   .slide-modal {
-    left: 20px;
-    right: 0;
-    width: 330px;
-    height: 400px;
-    border-radius: 15px 15px 0 0;
-    padding: 15px;
+    width: 330px; /* Auto-resize modal for smaller screens */
+    height: auto; /* Adjust height to content */
+    padding: 16px;
+    border-radius: 12px 12px 0 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .partners-container {
+    grid-template-columns: repeat(3, 1fr); /* Stack 2 per row for better fit */
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .partners-name img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .partners-name p {
+    font-size: 12px;
+  }
+
+  .partners-name h2 {
+    font-size: 10px;
   }
 
   .slide-modal h1 {
@@ -507,30 +525,6 @@ body.modal-open {
   }
 
   .slide-modal p {
-    font-size: 9px;
-  }
-
-  .partners-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-top: 30px;
-  }
-
-  .partners-name img {
-    width: 26px;
-    height: 26px;
-  }
-
-  .partners-name p {
-    font-size: 10px;
-  }
-
-  .partners-name h2 {
-    font-size: 9px;
-  }
-
-  .copy-rights {
-    font-size: 10px;
-    padding: 5px;
+    font-size: 11px;
   }
 }
