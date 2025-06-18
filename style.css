@@ -756,9 +756,11 @@ body.modal-open {
 
         margin-left: -8px;
        overflow-x: hidden;
+       overflow-y: visible;
+       overflow-y: scroll;
         border: none;
         width: 390px;
-        height: 1450px;
+        height: 1500px;
         
 
     }
