@@ -17,7 +17,7 @@
 <body>
 
 
-    <div class="container">
+<div class="container">
 <!----------------------------------Heading Section here---------------------------------------------------->
         <div class="heading">
             <a href="">
@@ -34,6 +34,30 @@
             <p>We're excited to design interiors that truly feel like home.</p>
         </div>
 
+        
+<!------------------------------------Add images section here------------------------------------------->
+
+<div class="slider">
+    <div class="slides">
+        <img src="./homepage1.JPG" class="slide" alt="Image 1">
+        <img src="./homepage2.JPG" class="slide" alt="Image 2">
+        <img src="./homepage3.JPG" class="slide" alt="Image 3">
+        <img src="./homepage4.JPG" class="slide" alt="Image 4">
+        <img src="./homepage5.JPG" class="slide" alt="Image 5">
+       
+    </div>
+
+    <div class="dots-container">
+        <span class="dot active"></span>
+        <span class="dot active"></span>
+        <span class="dot active"></span>
+        <span class="dot active"></span>
+        <span class="dot active"></span>
+        
+    </div>
+</div>
+
+
         <!----------------------------Our team section here--------------------------------------------->
 
         <div class="ourTeam-container">
@@ -42,13 +66,17 @@
 <br>
 Each team member brings their own unique expertise and dedication to delivering exceptional results. We foster a culture of creativity, precision, and client-centered service, ensuring that every space we touch is not just beautiful, but thoughtfully designed to enhance the way our clients live and work.</p>
         </div>
+
+
+
+
 <!----------------------------------Down section here---------------------------------------------------->
 
         <div class="down-section">
 
             <ul>
                 <li><a href="main.html">Home <i class="bi bi-house"></i></a></li>
-                <li><a href="" >My Projects <i class="bi bi-folder2-open"></i></a></li>
+                <li><a href="#" id="viewProjectsBtn">My Projects <i class="bi bi-folder2-open"></i></a></li>
                 <a href="#" id="viewTeamBtn">My Partners <i class="bi bi-people"></i></a>
                 <li><a href="#" id="viewContactBtn">Contact us <i class="bi bi-telephone"></i></a></li>
                 <li><a href="">Profile <i class="bi bi-person"></i></a></li>
@@ -180,6 +208,43 @@ Each team member brings their own unique expertise and dedication to delivering 
 
 
 
+<!----------------------------------------Slide up projects section here---------------------------------->
+  
+<div id="projectsModal" class="slide-modal2">
+  <button id="closeProjectsModal" >&times;</button>
+
+  <h1>MY PROJECTS <i class="bi bi-folder2-open"></i></h1>
+
+  <p>Here, few images are related to completed projects.</p>
+
+  <div class="slider1">
+  <div class="slides-container1" id="slides1">
+    <img src="./projects1.JPG" class="slide1" alt="Image 1">
+    <img src="./projects2.JPG" class="slide1" alt="Image 2">
+    <img src="./projects3.JPG" class="slide1" alt="Image 3">
+    <img src="./projects4.JPG" class="slide1" alt="Image 4">
+    <img src="./projects5.JPG" class="slide1" alt="Image 5">
+    <img src="./projects6.JPG" class="slide1" alt="Image 6">
+    <img src="./projects7.JPG" class="slide1" alt="Image 7">
+    <img src="./projects8.JPG" class="slide1" alt="Image 8">
+    <img src="./project9.JPG" class="slide1" alt="Image 9">
+    <img src="./projects10.JPG" class="slide1" alt="Image 10">
+    <img src="./projects11.JPG" class="slide1" alt="Image 11">
+    <img src="./projects12.JPG" class="slide1" alt="Image 12">
+    <img src="./projects13.JPG" class="slide1" alt="Image 13">
+    <img src="./projects14.JPG" class="slide1" alt="Image 14">
+
+  </div>
+
+  <!-- Navigation Buttons -->
+  <button class="prev-btn">&#10094;</button>
+  <button class="next-btn">&#10095;</button>
+</div>
+
+
+            
+</div>
+
 
 
 
@@ -191,9 +256,12 @@ Each team member brings their own unique expertise and dedication to delivering 
 <script>
 const viewTeamBtn = document.getElementById('viewTeamBtn');
 const viewContactBtn = document.getElementById('viewContactBtn');
+const viewProjectsBtn = document.getElementById('viewProjectsBtn');
 const teamModal = document.getElementById('teamModal');
 const contactModal = document.getElementById('contactModal');
 const closeContactModal = document.getElementById('closeContactModal');
+const projectsModal = document.getElementById('projectsModal');
+const closeProjectsModal = document.getElementById('closeProjectsModal');
 const closeBtn = document.getElementById('closeTeamModal');
 const mainContent = document.querySelector('.container');
 const body = document.body;
@@ -258,9 +326,99 @@ window.addEventListener('click', (e) => {
     
   }
 });
+
+
+
+
+// Function to open the my projects modal
+
+
+viewProjectsBtn.addEventListener('click', () => {
+  projectsModal.classList.add('active');
+  mainContent.classList.add('blur');
+  body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+
+  
+  
+});
+
+closeProjectsModal.addEventListener('click', () => {
+  projectsModal.classList.remove('active');
+  mainContent.classList.remove('blur');
+    body.style.overflow = 'auto'; // Restore scrolling when modal is closed
+ 
+});
+
+// Optional: close when clicking outside modal (if needed)
+window.addEventListener('click', (e) => {
+  if (e.target === projectsModal) {
+    projectsModal.classList.remove('active');
+    mainContent.classList.remove('blur');
+    body.style.overflow = 'auto'; // Restore scrolling when modal is closed
+    
+  }
+});
+
+
+
+
 </script>
 
 
+
+
+<!-----------------------------Images slider Script section here----------------------->
+<script>
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            let index = 0;
+
+            function showSlide(n) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                dots[i].classList.remove('active');
+            });
+
+            slides[n].classList.add('active');
+            dots[n].classList.add('active');
+            }
+
+            function autoSlide() {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+            }
+
+            setInterval(autoSlide, 2000); // Change image every 3 seconds
+
+            // Initialize first slide
+            showSlide(index);
+
+</script>
+
+
+
+<!-------------------------------slide up images section here------------------------------------->
+
+<script>
+const slidesContainer = document.getElementById("slides1");
+const slides1 = document.querySelectorAll(".slide1");
+const totalSlides = slides1.length;
+let currentIndex = 0;
+
+document.querySelector(".prev-btn").addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateSlide();
+});
+
+document.querySelector(".next-btn").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlide();
+});
+
+function updateSlide() {
+  slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+</script>
 
 </body>
 </html>
