@@ -31,9 +31,9 @@
         <div class="down-section">
 
             <ul>
-                <li><a href="#">Home <i class="bi bi-house"></i></a></li>
-                <li><a href="">My Projects <i class="bi bi-folder2-open"></i></a></li>
-                <li><a href="">My Partners <i class="bi bi-people"></i></a></li>
+                <li><a href="main.html">Home <i class="bi bi-house"></i></a></li>
+                <li><a href="" >My Projects <i class="bi bi-folder2-open"></i></a></li>
+                <a href="#" id="viewTeamBtn">My Partners <i class="bi bi-people"></i></a>
                 <li><a href="">Contact us <i class="bi bi-telephone"></i></a></li>
                 <li><a href="">Profile <i class="bi bi-person"></i></a></li>
             </ul>
@@ -67,34 +67,105 @@
 
 <!-----------------------------------Quality material section here-------------------------------------->
        <div class="quality-container">
-  <h1>Quality Materials & Accuracy</h1>
-  <h2>"We use High-Quality Materials for Every Project".</h2>
+                    <h1>Quality Materials & Accuracy</h1>
+                    <h2>"We use High-Quality Materials for Every Project".</h2>
 
-  <img src="./adhesives.jpg" alt="" class="adhesives">
-  <img src="./plywood.jpg" alt="" class="plywood">
-  <img src="./hardware.jpg" alt="" class="hardware">
-  <img src="./laminates.jpg" alt="" class="laminates">
+                    <img src="./adhesives.jpg" alt="" class="adhesives">
+                    <img src="./plywood.jpg" alt="" class="plywood">
+                    <img src="./hardware.jpg" alt="" class="hardware">
+                    <img src="./laminates.jpg" alt="" class="laminates">
 
-  <h3>
-    At our core, we believe that exceptional interior design begins with two key elements:
-    quality materials and precise execution. Every project we undertake is driven by a commitment
-    to craftsmanship, where each detail is carefully considered and flawlessly executed.
-    From selecting premium textures and finishes to implementing layouts with architectural accuracy,
-    we ensure that every aspect of the space reflects durability, elegance, and functionality.
-  </h3>
+                    <h3>
+                        At our core, we believe that exceptional interior design begins with two key elements:
+                        quality materials and precise execution. Every project we undertake is driven by a commitment
+                        to craftsmanship, where each detail is carefully considered and flawlessly executed.
+                        From selecting premium textures and finishes to implementing layouts with architectural accuracy,
+                        we ensure that every aspect of the space reflects durability, elegance, and functionality.
+                    </h3>
 
-  <h4>
-    With us, you're not just getting a beautiful space – you're investing in quality,
-    precision, and timeless design.
-  </h4>
+                    <h4>
+                        With us, you're not just getting a beautiful space – you're investing in quality,
+                        precision, and timeless design.
+                    </h4>
+        </div>
+
+
+
+
+
+ <!-- Slide-Up Team Modal -->
+<div id="teamModal" class="slide-modal">
+  <button id="closeTeamModal" >&times;</button>
+  <h1>MY PARTNERS</h1>
+  <p>"Our team of highly professional contractors brings expertise, precision, and craftsmanship
+     to every interior design project. With a strong commitment to quality and timely execution,
+      we collaborate closely with designers and clients to transform spaces into elegant, functional 
+      environments. From structural work to fine detailing, we ensure each project meets the highest industry standards."
+
+</p>
+  <div class="partners-container">
+    
+    <div class="partners-name">
+      <img src="./profile1.svg" alt="">
+      <p>Sesha Chari</p>
+      <h2>Head of the Contractor</h2>
+    </div>
+    <div class="partners-name">
+      <img src="./profile1.svg" alt="">
+      <p>Chinni</p>
+      <h2>Sub - Contractor</h2>
+    </div>
+    <div class="partners-name">
+      <img src="./profile1.svg" alt="">
+      <p>Ganesh</p>
+      <h2>Sub - Contractor</h2>
+    </div>
+    <div class="partners-name">
+      <img src="./profile1.svg" alt="">
+      <p>Ramana</p>
+      <h2>Sub - Contractor</h2>
+    </div>
+    <div class="partners-name">
+      <img src="./profile1.svg" alt="">
+      <p>Siva</p>
+      <h2>Sub - Contractor</h2>
+    </div>
+  </div>
 </div>
 
 
 
+ 
+<p class="copy-rights"> <i class="bi bi-c-circle"></i> Srinu's Interior Design Works 2025. All rights reserved.</p>
+
+
 
 
 </div>
+
+
 <!----------------------------------Scripting section here------------------------------------------>
+<script>
+const viewTeamBtn = document.getElementById('viewTeamBtn');
+const teamModal = document.getElementById('teamModal');
+const closeBtn = document.getElementById('closeTeamModal');
+
+viewTeamBtn.addEventListener('click', (e) => {
+  e.preventDefault(); // prevent navigation
+  teamModal.classList.add('active');
+});
+
+closeBtn.addEventListener('click', () => {
+  teamModal.classList.remove('active');
+});
+
+// Optional: click outside to close
+window.addEventListener('click', (e) => {
+  if (e.target === teamModal) {
+    teamModal.classList.remove('active');
+  }
+});
+</script>
 
 
 
