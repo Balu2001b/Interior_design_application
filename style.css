@@ -755,9 +755,11 @@ body.modal-open {
     .container{
 
         margin-left: -8px;
+       overflow-x: hidden;
         border: none;
-        width: 100%;
-        height: 1380px;
+        width: 390px;
+        height: 1450px;
+        
 
     }
 
@@ -789,7 +791,7 @@ body.modal-open {
     
         height: auto;
         width: 375px;
-        margin-left: 10px;
+        margin-left: 5px;
         margin-top: 50px;
     }
     .budget-container h2{
@@ -806,16 +808,10 @@ body.modal-open {
     .down-section{
 
         position: fixed;
-        bottom: 0;
+        bottom: 0px;
         width: 100%;
     }
-    .quality-container{
-
-        height: auto;
-        margin-left: 10px;
-        margin-top: 50px;
-    }
-
+  
     .contactus-container{
 
     height: auto;
@@ -829,7 +825,7 @@ body.modal-open {
 
    
 .slider {
-    margin-left: 20px;
+    margin-left: 10px;
     width: 390px;
     overflow: hidden;
     border-radius: 5px;
