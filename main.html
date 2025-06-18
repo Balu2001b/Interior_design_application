@@ -34,7 +34,7 @@
                 <li><a href="main.html">Home <i class="bi bi-house"></i></a></li>
                 <li><a href="" >My Projects <i class="bi bi-folder2-open"></i></a></li>
                 <a href="#" id="viewTeamBtn">My Partners <i class="bi bi-people"></i></a>
-                <li><a href="">Contact us <i class="bi bi-telephone"></i></a></li>
+                <li><a href="#" id="viewContactBtn">Contact us <i class="bi bi-telephone"></i></a></li>
                 <li><a href="">Profile <i class="bi bi-person"></i></a></li>
             </ul>
         </div>
@@ -99,7 +99,7 @@
 </div>
 
 
- <!-- Slide-Up Team Modal -->
+ <!---------------------------------- Slide-Up My Partners Modal ---------------------------------->
   
 <div id="teamModal" class="slide-modal">
   <button id="closeTeamModal" >&times;</button>
@@ -141,6 +141,29 @@
 </div>
 
 
+<!----------------------------------Slide-Up contact us  Modal ---------------------------------->
+
+
+  
+<div id="contactModal" class="slide-modal1">
+  <button id="closeContactModal" >&times;</button>
+  <h1>CONTACT US</h1>
+  <div class="contactus-container">
+
+         <h2>Get in Touch</h2>
+         <p>If you have any questions or inquiries, feel free to reach out to us!</p>
+         <div class="contact-details">
+            <h1>Contact Details</h1>
+            <p><i class="bi bi-telephone"></i> Phone: +91 9666183030</p>
+            <p><i class="bi bi-envelope"></i> Email: vallurisrinu37@gmail.com</p>
+
+         </div>
+  </div>
+</div>
+
+
+
+
 
 
 
@@ -150,11 +173,16 @@
 <!----------------------------------Scripting section here------------------------------------------>
 <script>
 const viewTeamBtn = document.getElementById('viewTeamBtn');
+const viewContactBtn = document.getElementById('viewContactBtn');
 const teamModal = document.getElementById('teamModal');
+const contactModal = document.getElementById('contactModal');
+const closeContactModal = document.getElementById('closeContactModal');
 const closeBtn = document.getElementById('closeTeamModal');
 const mainContent = document.querySelector('.container');
 const body = document.body;
 
+
+// Function to open the partners modal
 viewTeamBtn.addEventListener('click', () => {
   teamModal.classList.add('active');
   mainContent.classList.add('blur');
@@ -175,6 +203,39 @@ closeBtn.addEventListener('click', () => {
 window.addEventListener('click', (e) => {
   if (e.target === teamModal) {
     teamModal.classList.remove('active');
+    mainContent.classList.remove('blur');
+    body.style.overflow = 'auto'; // Restore scrolling when modal is closed
+    
+  }
+});
+
+
+
+
+
+// Function to open the contact modal
+
+
+viewContactBtn.addEventListener('click', () => {
+  contactModal.classList.add('active');
+  mainContent.classList.add('blur');
+  body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+
+  
+  
+});
+
+closeContactModal.addEventListener('click', () => {
+  contactModal.classList.remove('active');
+  mainContent.classList.remove('blur');
+    body.style.overflow = 'auto'; // Restore scrolling when modal is closed
+ 
+});
+
+// Optional: close when clicking outside modal (if needed)
+window.addEventListener('click', (e) => {
+  if (e.target === contactModal) {
+    contactModal.classList.remove('active');
     mainContent.classList.remove('blur');
     body.style.overflow = 'auto'; // Restore scrolling when modal is closed
     
