@@ -502,8 +502,8 @@ body.modal-open {
   }
 
   .partners-container {
-    grid-template-columns: repeat(3, 1fr); /* Stack 2 per row for better fit */
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr); /* Stack 3 per row for better fit */
+    gap: 15px;
     justify-content: center;
   }
 
@@ -513,7 +513,7 @@ body.modal-open {
   }
 
   .partners-name p {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .partners-name h2 {
