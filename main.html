@@ -91,9 +91,16 @@
 
 
 
+<p class="copy-rights"> <i class="bi bi-c-circle"></i> Srinu's Interior Design Works 2025. All rights reserved.</p>
+
+
+
+
+</div>
 
 
  <!-- Slide-Up Team Modal -->
+  
 <div id="teamModal" class="slide-modal">
   <button id="closeTeamModal" >&times;</button>
   <h1>MY PARTNERS</h1>
@@ -135,13 +142,9 @@
 
 
 
+
+
  
-<p class="copy-rights"> <i class="bi bi-c-circle"></i> Srinu's Interior Design Works 2025. All rights reserved.</p>
-
-
-
-
-</div>
 
 
 <!----------------------------------Scripting section here------------------------------------------>
@@ -149,20 +152,27 @@
 const viewTeamBtn = document.getElementById('viewTeamBtn');
 const teamModal = document.getElementById('teamModal');
 const closeBtn = document.getElementById('closeTeamModal');
+const mainContent = document.querySelector('.container');
+const body = document.body;
 
-viewTeamBtn.addEventListener('click', (e) => {
-  e.preventDefault(); // prevent navigation
+viewTeamBtn.addEventListener('click', () => {
   teamModal.classList.add('active');
+  mainContent.classList.add('blur');
+  body.classList.add('modal-open');
 });
 
 closeBtn.addEventListener('click', () => {
   teamModal.classList.remove('active');
+  mainContent.classList.remove('blur');
+  body.classList.remove('modal-open');
 });
 
-// Optional: click outside to close
+// Optional: close when clicking outside modal (if needed)
 window.addEventListener('click', (e) => {
   if (e.target === teamModal) {
     teamModal.classList.remove('active');
+    mainContent.classList.remove('blur');
+    body.classList.remove('modal-open');
   }
 });
 </script>
