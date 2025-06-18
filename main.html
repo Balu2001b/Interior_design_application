@@ -67,7 +67,7 @@
 
 <!-----------------------------------Quality material section here-------------------------------------->
        <div class="quality-container">
-                    <h1>Quality Materials & Accuracy</h1>
+                    <h1>Quality Materials</h1>
                     <h2>"We use High-Quality Materials for Every Project".</h2>
 
                     <img src="./adhesives.jpg" alt="" class="adhesives">
@@ -158,13 +158,17 @@ const body = document.body;
 viewTeamBtn.addEventListener('click', () => {
   teamModal.classList.add('active');
   mainContent.classList.add('blur');
-  body.classList.add('modal-open');
+  body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+
+  
+  
 });
 
 closeBtn.addEventListener('click', () => {
   teamModal.classList.remove('active');
   mainContent.classList.remove('blur');
-  body.classList.remove('modal-open');
+    body.style.overflow = 'auto'; // Restore scrolling when modal is closed
+ 
 });
 
 // Optional: close when clicking outside modal (if needed)
@@ -172,7 +176,8 @@ window.addEventListener('click', (e) => {
   if (e.target === teamModal) {
     teamModal.classList.remove('active');
     mainContent.classList.remove('blur');
-    body.classList.remove('modal-open');
+    body.style.overflow = 'auto'; // Restore scrolling when modal is closed
+    
   }
 });
 </script>
