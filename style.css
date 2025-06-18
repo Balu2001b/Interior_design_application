@@ -9,7 +9,7 @@ body{
 .container {
    
     border: 1px solid black;
-    height: 1500px;
+    height: 1440px;
     width: 390px;
     margin-left: 480px;
 
@@ -73,6 +73,75 @@ body{
     text-align: center;
     color: #353434;
 }
+
+
+
+
+/*----------------------------image sliding styling section here----------------------------*/
+
+
+
+
+.slider {
+    margin-left: 10px;
+    max-width: 370px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+}
+
+.slides img{
+
+    width: 100%;
+    height: 200px;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Dots */
+.dots-container {
+   
+    margin-left: 190px;
+    margin-bottom: 0px;
+    margin-top: -20px;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+
+
+
+
+
+
+
+
 
 /*-------------------------------------Our Team styling section here----------------------------*/
 
@@ -558,6 +627,114 @@ body.modal-open {
     font-size: 14px;
     text-align: center;
 }
+
+
+
+/*-------------------------------my projects styling section here-----------------------------*/
+
+
+/* Modal styling */
+.slide-modal2{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100%;
+  width: 330px;
+    height: auto;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 20px;
+  z-index: 1000;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  transition: bottom 0.4s ease-in-out;
+}
+/* When modal is active, slide up */
+.slide-modal2.active {
+  bottom: 0;
+ 
+}
+
+/* Close button */
+#closeProjectsModal {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: red;
+}
+
+
+.slide-modal2 h1{
+
+    text-align: center;
+    font-size: 16px;
+    margin-top: 0;
+    color: red;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+.slide-modal2 p{
+
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.slider1 {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.slides-container1 {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+
+.slide1 {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 200px;
+  object-fit: fill;
+}
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+
+
+
+
 /*--------------------copy-rights section styling here-----------------------------*/
 
 .copy-rights{
@@ -580,7 +757,7 @@ body.modal-open {
         margin-left: -8px;
         border: none;
         width: 100%;
-        height: 1300px;
+        height: 1380px;
 
     }
 
@@ -607,10 +784,11 @@ body.modal-open {
     }
 
  
-    .budget-container{
+    .budget-container,.quality-container,.ourTeam-container,.about-container{
 
     
         height: auto;
+        width: 375px;
         margin-left: 10px;
         margin-top: 50px;
     }
@@ -618,6 +796,7 @@ body.modal-open {
 
         letter-spacing: 0.3px;
         font-size: 10px;
+       
     }
     .quality-container h2{
 
@@ -647,6 +826,17 @@ body.modal-open {
 
         height: auto;
     }
+
+   
+.slider {
+    margin-left: 20px;
+    width: 390px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
     .copy-rights{
 
     width: 390px;
