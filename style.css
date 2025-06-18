@@ -2,13 +2,17 @@
     --color-primary: #0073ff;
     --color-white: #e9e9e9;
     }
+body{
 
+    background-color: #f0efef;
+}
 .container {
    
     border: 1px solid black;
     height: 1000px;
     width: 390px;
     margin-left: 480px;
+
    
 
 
@@ -143,6 +147,7 @@
    object-fit: fill;
    margin-left: 140px;
     margin-top: -10px;
+    margin-bottom: 15px;
     
     
 }
@@ -159,13 +164,13 @@
 
 .budget-container{
 
-    height: 150px;
+    height: 130px;
     width: 370px;
     margin-left: 10px;
-    margin-top: 20px;
+    margin-top: 25px;
     border-radius: 10px;
     border: 1px solid #ccc;
-    box-shadow:  5px 5px 3px 3px rgb(197, 195, 195);
+    box-shadow:  5px 5px 3px 3px rgba(3, 3, 3, 0.397);
     background-color: white;
 
  
@@ -174,9 +179,9 @@
 
 .budget-container h1{
 
-    text-align: center;
+   
     font-size: 16px;
-    margin-top: 0;
+    margin-top: -25px;
     color: red;
     font-weight: 700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -211,10 +216,10 @@
     height: 420px;
     width: 370px;
     margin-left: 10px;
-    margin-top: 30px;
+    margin-top: 50px;
     border-radius: 10px;
     border: 1px solid #ccc;
-     box-shadow:  5px 5px 3px 3px rgb(197, 195, 195);
+     box-shadow:  5px 5px 3px 3px rgba(3, 3, 3, 0.397);
     background-color: white;
 
 
@@ -222,9 +227,8 @@
 
 .quality-container h1{
 
-    text-align: center;
     font-size: 16px;
-    margin-top: 0;
+    margin-top: -25px;
     color: red;
     font-weight: 700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -324,16 +328,16 @@ body.modal-open {
     height: 400px;
   background: rgba(255, 255, 255, 0.96);
   padding: 20px;
-  z-index: 1001;
+  z-index: 1000;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
   transition: bottom 0.4s ease-in-out;
 }
-
 /* When modal is active, slide up */
 .slide-modal.active {
   bottom: 0;
+ 
 }
 
 /* Close button */
@@ -346,21 +350,7 @@ body.modal-open {
   color: red;
 }
 
-/* Optional: darkened background using pseudo-element */
-.modal-content::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.2);
-  z-index: 1000;
-  display: none;
-}
 
-/* Show overlay when modal active */
-.slide-modal.active ~ .modal-content::before {
-  display: block;
-}
 
 .slide-modal h1{
 
@@ -462,6 +452,10 @@ body.modal-open {
 
         margin-top: 75px;
     }
+    .image-section p{
+
+        margin-top: -16px;
+    }
 
  
     .budget-container{
@@ -469,8 +463,18 @@ body.modal-open {
     
         height: auto;
         margin-left: 10px;
+        margin-top: 20px;
     }
+    .budget-container h2{
 
+        letter-spacing: 0.3px;
+        font-size: 10px;
+    }
+    .quality-container h2{
+
+        letter-spacing: 0.3px;
+        font-size: 10px;
+    }
     .down-section{
 
         position: fixed;
@@ -481,6 +485,7 @@ body.modal-open {
 
         height: auto;
         margin-left: 10px;
+        margin-top: 50px;
     }
     .copy-rights{
    
