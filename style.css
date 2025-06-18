@@ -171,7 +171,7 @@ body{
     border-radius: 10px;
     border: 1px solid #ccc;
     box-shadow:  5px 5px 3px 3px rgba(3, 3, 3, 0.397);
-    background-color: white;
+    background-color: #FFFFFF;
 
  
 
@@ -413,7 +413,89 @@ body.modal-open {
 }
 
 
+/*------------------------contact us  section styling here-----------------------------*/
 
+
+/* Modal styling */
+.slide-modal1 {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100%;
+  width: 330px;
+    height: auto;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 20px;
+  z-index: 1000;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  transition: bottom 0.4s ease-in-out;
+}
+/* When modal is active, slide up */
+.slide-modal1.active {
+  bottom: 0;
+ 
+}
+
+/* Close button */
+#closeContactModal {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: red;
+}
+
+
+
+.slide-modal1 h1{
+
+    text-align: center;
+    font-size: 16px;
+    margin-top: 0;
+    color: red;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.contactus-container h2{
+  
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contactus-container p{
+
+    font-size: 12px;
+    color: #444343;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-details {
+
+    border: 1px solid #ccc;
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow:  5px 5px 3px 3px rgba(3, 3, 3, 0.397);
+}
+
+.contact-details p{
+
+    color: #151B54;
+    font-size: 14px;
+    text-align: center;
+}
+/*--------------------copy-rights section styling here-----------------------------*/
 
 .copy-rights{
    
@@ -487,16 +569,26 @@ body.modal-open {
         margin-left: 10px;
         margin-top: 50px;
     }
-    .copy-rights{
-   
+
+    .contactus-container{
+
+    height: auto;
     
+    }
+
+    .contact-details{
+
+        height: auto;
+    }
+    .copy-rights{
+
     width: 390px;
     
 }
 
 }
 
-@media screen and (max-width: 430px) {
+@media only screen and (max-width: 600px) {
   .slide-modal {
     width: 330px; /* Auto-resize modal for smaller screens */
     height: auto; /* Adjust height to content */
