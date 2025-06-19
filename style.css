@@ -18,6 +18,43 @@ body{
 
 }
 
+
+
+#preloader {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(236, 235, 235, 0.8); /* semi-transparent white */
+    backdrop-filter: blur(2px); /* applies blur to whatever's behind */
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+#preloader img {
+    width: 40px; /* adjust size as needed */
+    height: 40px; /* adjust size as needed */
+    animation: spin 2s linear infinite;
+    
+}
+
+.loader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+
+
+
+
 .heading{
 
     height: 65px;
@@ -56,6 +93,14 @@ body{
     
 }
 
+.bi-bell{
+
+float: right;
+margin-right: 20px;
+color: white;
+margin-top: -25px;
+
+}
 
 .welcome h1{
 
@@ -736,18 +781,121 @@ body.modal-open {
 
 
 /*--------------------copy-rights section styling here-----------------------------*/
-
-.copy-rights{
-   
-    padding: 6px;
-    text-align: center;
-    font-size: 12px;
-   
-    background-color: #ccc;
-    color: #151B54;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.dropdown-footer .dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
+.dropdown-footer.open .dropdown-content {
+  max-height: 200px; /* Adjust based on content height */
+}
+
+.dropdown-content p{
+
+    font-size: 14px;
+}
+
+
+.dropdown-footer .dropdown-toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  margin-top: -10px;
+  color: black;
+}
+
+.dropdown-footer .dropdown-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-footer.open .dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+
+
+
+.footer {
+  background-color: #d4d3d3;
+  color: #151B54;
+  padding: 30px 20px 10px;
+  font-family: 'Segoe UI', sans-serif;
+  height: auto;
+  margin-top: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-container h2 {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: black;
+  margin-top: -10px;
+
+}
+
+.footer-container h3{
+
+    font-size: 20px;
+   margin-top: -20px;
+   margin-left: 40px;
+
+}
+.footer-about, .footer-links, .footer-contact, .footer-social {
+  flex: 1 1 220px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+.social-icons a {
+  color: #151B54;
+  margin-right: 15px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ffcc70;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+ margin-bottom: 50px;
+  margin-top: 30px;
+  font-size: 14px;
+  color: black;
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -760,7 +908,7 @@ body.modal-open {
        overflow-y: scroll;
         border: none;
         width: 390px;
-        height: 1530px;
+        height: 1500px;
         
 
     }
