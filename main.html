@@ -18,11 +18,26 @@
 
 
 <div class="container">
+
+
+   <!----------------------------------Preloader Section Here--------------------------------->
+
+    <div id="preloader" class="preloader">
+      <p id="loader-text1" class="loader-text1"></p>
+        <img src="./preloader-s-unscreen.gif" alt="">
+        
+
+    </div>
+
+
+
+
 <!----------------------------------Heading Section here---------------------------------------------------->
         <div class="heading">
             <a href="">
                 <img src="./logo.PNG" alt="">
                 <h1>Srinu's Interior Design</h1>
+                <i class="bi bi-bell"></i>
             </a>
         </div>
 
@@ -127,16 +142,55 @@ Each team member brings their own unique expertise and dedication to delivering 
         </div>
 
         
-        <div class="about-container">
-            <h1>About us</h1>
-            <p>At Srinu's Interior Design Works, we believe that great design is more than just aesthetics - it's about
+        
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+<h3>Srinu's Interior Design.com</h3>
+    <!-- About Us with Dropdown -->
+    <div class="footer-about dropdown-footer">
+  <h2 class="dropdown-toggle" onclick="toggleDropdown('aboutDropdown')">
+      
+    About Us <i class="bi bi-chevron-down"></i>
+  </h2>
+  <div id="aboutDropdown" class="dropdown-content">
+    <p>At Srinu's Interior Design Works, we believe that great design is more than just aesthetics - it's about
                  creating spaces that inspire, function beautifully, and reflect the personality of those who 
                  live or work in them. With a passion for innovation and a keen eye for detail, our interior design 
                  studio specializes in transforming ordinary spaces into elegant and timeless environments.</p>
-        </div>
+  </div>
+</div>
 
 
-<p class="copy-rights"> <i class="bi bi-c-circle"></i> Srinu's Interior Design Works 2025. All rights reserved.</p>
+    <div class="footer-links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+   
+
+    <div class="footer-social">
+      <h2>Follow Us</h2>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-pinterest"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Srinu's Interior Design.com . All Rights Reserved.</p>
+  </div>
+</footer>
 
 
 
@@ -419,6 +473,39 @@ function updateSlide() {
   slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 </script>
+
+
+<!-------------------------------------Dropdown section here---------------------------------------->
+
+<script>
+  function toggleDropdown(id) {
+    const content = document.getElementById(id);
+    const parent = content.parentElement;
+    parent.classList.toggle('open');
+  }
+</script>
+
+
+
+<!------------------------------------preloader section here---------------------------------------------->
+
+
+
+<script>
+    var loader = document.getElementById('preloader');
+   
+    window.addEventListener('load',function(){
+       
+        
+        setTimeout(function (){
+            loader.style.display = "none";
+            
+
+        },800);
+    }
+)
+</script>
+
 
 </body>
 </html>
