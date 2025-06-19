@@ -1024,3 +1024,44 @@ body.modal-open {
     font-size: 11px;
   }
 }
+
+
+
+
+/* Default for mobile first */
+
+/* For small tablets and large phones */
+@media (min-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* For tablets and small laptops */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* For desktops */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* For large desktops */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
