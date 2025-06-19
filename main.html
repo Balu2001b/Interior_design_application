@@ -20,6 +20,10 @@
 <div class="container">
 
 
+  
+
+
+
    <!----------------------------------Preloader Section Here--------------------------------->
 
     <div id="preloader" class="preloader">
@@ -35,10 +39,28 @@
 <!----------------------------------Heading Section here---------------------------------------------------->
         <div class="heading">
             <a href="">
-                <img src="./logo.PNG" alt="">
-                <h1>Srinu's Interior Design</h1>
-                <i class="bi bi-bell"></i>
-            </a>
+                <img src="./logo.PNG" alt=""> </a>
+                <a href=""><h1>Srinu's Interior Design</h1></a>
+                <a href="#" id="viewNotifyBtn" class="notify"><i class="bi bi-bell" ></i><span id="notifyBadge" class="notify-badge">1</span>
+</a>
+                
+
+                
+  <!--------------------------------------NOTIFY section here----------------------------------->
+
+                <!-- Notification Sidebar -->
+              <div id="notificationSidebar" class="notification-sidebar">
+                          <button id="closeNotifySidebar" class="close-btn">&times;</button>
+                          <h2>Notifications</h2>
+                          <ul id="notificationList">
+                            <li class="new">Explore my Interior Design Website. Thank you</li>
+                           
+                            
+                          </ul>
+                        </div>
+
+                
+           
         </div>
 
 
@@ -326,7 +348,7 @@ Each team member brings their own unique expertise and dedication to delivering 
   </div>
 
   <blockquote>“Their design transformed our house into a dream home.”</blockquote>
-  <a href="#" class="cta-button">Start Your Project</a>
+  <a href="" class="cta-button">Start Your Project</a>
 </section>
 
 
@@ -336,12 +358,22 @@ Each team member brings their own unique expertise and dedication to delivering 
  
 
 
+
 <!----------------------------------Scripting section here------------------------------------------>
+
+
+
+
+
+
 <script>
 const viewTeamBtn = document.getElementById('viewTeamBtn');
 const viewContactBtn = document.getElementById('viewContactBtn');
 const viewProjectsBtn = document.getElementById('viewProjectsBtn');
 const viewProfileBtn = document.getElementById('viewProfileBtn');
+const viewNotifyBtn = document.getElementById('viewNotifyBtn');
+
+
 const teamModal = document.getElementById('teamModal');
 const closeBtn = document.getElementById('closeTeamModal');
 const contactModal = document.getElementById('contactModal');
@@ -350,6 +382,10 @@ const projectsModal = document.getElementById('projectsModal');
 const closeProjectsModal = document.getElementById('closeProjectsModal');
 const profileModal = document.getElementById('profileModal');
 const closeProfileModal = document.getElementById('closeProfileModal');
+const notifyModal = document.getElementById('notifyModal');
+const closeNotifyModal = document.getElementById('closeNotifyModal');
+ const notifyBadge = document.getElementById("notifyBadge");
+  const notificationList = document.getElementById("notificationList");
 const mainContent = document.querySelector('.container');
 const body = document.body;
 
@@ -479,6 +515,32 @@ window.addEventListener('click', (e) => {
   }
 });
 
+
+// Count unread notifications on page load
+  function updateNotificationCount() {
+    const unreadItems = notificationList.querySelectorAll(".new");
+    if (unreadItems.length > 0) {
+      notifyBadge.textContent = unreadItems.length;
+      notifyBadge.style.display = "inline-block";
+    } else {
+      notifyBadge.style.display = "none";
+    }
+  }
+
+  viewNotifyBtn.addEventListener("click", () => {
+    notificationSidebar.classList.add("open");
+    // Mark all as read (remove "new" class)
+    const unreadItems = notificationList.querySelectorAll(".new");
+    unreadItems.forEach(item => item.classList.remove("new"));
+    updateNotificationCount(); // Re-check and hide badge if needed
+  });
+
+  closeNotifySidebar.addEventListener("click", () => {
+    notificationSidebar.classList.remove("open");
+  });
+
+  // Initialize
+  updateNotificationCount();
 
 
 
