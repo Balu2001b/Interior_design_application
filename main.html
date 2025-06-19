@@ -94,7 +94,7 @@ Each team member brings their own unique expertise and dedication to delivering 
                 <li><a href="#" id="viewProjectsBtn">My Projects <i class="bi bi-folder2-open"></i></a></li>
                 <a href="#" id="viewTeamBtn">My Partners <i class="bi bi-people"></i></a>
                 <li><a href="#" id="viewContactBtn">Contact us <i class="bi bi-telephone"></i></a></li>
-                <li><a href="">Profile <i class="bi bi-person"></i></a></li>
+                <li><a href="#" id="viewProfileBtn">Profile <i class="bi bi-person"></i></a></li>
             </ul>
         </div>
 
@@ -299,8 +299,38 @@ Each team member brings their own unique expertise and dedication to delivering 
             
 </div>
 
+<!-------------------------------------profile section here-------------------------------------->
+
+  
+<div id="profileModal" class="slide-modal3">
+  <button id="closeProfileModal" >&times;</button>
 
 
+   <section class="profile-section">
+    <h2>"కర్మణ్యే వాధికారస్తే మా ఫలేషు కదాచన" |</h2>
+  <img src="./profile_pic.JPG" alt="Designer Photo" class="profile-image">
+  <h4>Hi Everyone, Myself is V.Srinuvasu. <br>
+    Welcome to Srinu's Interior Design Works. <br>
+   </h4>
+  <h3>We are a passionate interior design team specializing in turning ideas into elegant, functional spaces. 
+    With a strong eye for detail and years of experience, we deliver personalized designs that reflect your lifestyle 
+    and vision.</h3>
+
+  <p>"Creating spaces that speak to the soul."</p>
+  <p>With 7+ years of experience, we design interiors that blend elegance, comfort, and function—tailored to each client’s unique lifestyle.</p>
+
+  <div class="stats">
+    <div><strong>50+</strong><br>Projects</div>
+    <div><strong>7 Years</strong><br>Experience</div>
+    <div><strong>4</strong><br>Cities</div>
+  </div>
+
+  <blockquote>“Their design transformed our house into a dream home.”</blockquote>
+  <a href="#" class="cta-button">Start Your Project</a>
+</section>
+
+
+  </div>
 
 
  
@@ -311,12 +341,15 @@ Each team member brings their own unique expertise and dedication to delivering 
 const viewTeamBtn = document.getElementById('viewTeamBtn');
 const viewContactBtn = document.getElementById('viewContactBtn');
 const viewProjectsBtn = document.getElementById('viewProjectsBtn');
+const viewProfileBtn = document.getElementById('viewProfileBtn');
 const teamModal = document.getElementById('teamModal');
+const closeBtn = document.getElementById('closeTeamModal');
 const contactModal = document.getElementById('contactModal');
 const closeContactModal = document.getElementById('closeContactModal');
 const projectsModal = document.getElementById('projectsModal');
 const closeProjectsModal = document.getElementById('closeProjectsModal');
-const closeBtn = document.getElementById('closeTeamModal');
+const profileModal = document.getElementById('profileModal');
+const closeProfileModal = document.getElementById('closeProfileModal');
 const mainContent = document.querySelector('.container');
 const body = document.body;
 
@@ -412,6 +445,42 @@ window.addEventListener('click', (e) => {
     
   }
 });
+
+
+
+
+
+// Function to open the my profile modal
+
+
+viewProfileBtn.addEventListener('click', () => {
+  profileModal.classList.add('active');
+  mainContent.classList.add('blur');
+  body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+
+  
+  
+});
+
+closeProfileModal.addEventListener('click', () => {
+  profileModal.classList.remove('active');
+  mainContent.classList.remove('blur');
+    body.style.overflow = 'auto'; // Restore scrolling when modal is closed
+ 
+});
+
+// Optional: close when clicking outside modal (if needed)
+window.addEventListener('click', (e) => {
+  if (e.target === profileModal) {
+    profileModal.classList.remove('active');
+    mainContent.classList.remove('blur');
+    body.style.overflow = 'auto'; // Restore scrolling when modal is closed
+    
+  }
+});
+
+
+
 
 
 
