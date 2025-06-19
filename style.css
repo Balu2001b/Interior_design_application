@@ -87,14 +87,6 @@ body{
     
 }
 
-.bi-bell{
-
-float: right;
-margin-right: 20px;
-color: white;
-margin-top: -25px;
-
-}
 
 .welcome h1{
 
@@ -896,6 +888,89 @@ body.modal-open {
 }
 
 
+/*----------------------------------Notify styling section here------------------------------*/
+
+
+
+/* Bell icon container */
+.notify {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: white;
+}
+
+/* Badge styling */
+.notify-badge {
+  position: absolute;
+  top: 6px;
+  right: -12px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Notification Sidebar */
+.notification-sidebar {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 9999;
+  transition: right 0.4s ease;
+}
+
+.notification-sidebar.open {
+  right: 0;
+}
+
+.notification-sidebar h2 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #151B54;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.notification-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.notification-sidebar li {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+/* Close Button */
+.notification-sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
 
 
 
