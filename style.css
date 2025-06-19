@@ -5,6 +5,8 @@
 body{
 
     background-color: #f0efef;
+    overflow-y: scroll;
+    overflow-y: visible;
 }
 .container {
    
@@ -42,14 +44,6 @@ body{
     
 }
 
-.loader-spinner {
-  width: 50px;
-  height: 50px;
-  border: 6px solid #ccc;
-  border-top: 6px solid #007bff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
 
 
 
@@ -900,15 +894,17 @@ body.modal-open {
 
 @media only screen and (max-width: 600px) {
 
+
+
     .container{
 
         margin-left: -8px;
        overflow-x: hidden;
-       overflow-y: visible;
-       overflow-y: scroll;
+     
+       overflow-y: auto;
         border: none;
         width: 390px;
-        height: 1500px;
+        height: auto;
         
 
     }
@@ -977,7 +973,7 @@ body.modal-open {
 .slider {
     margin-left: 10px;
     width: 390px;
-    overflow: hidden;
+    
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
