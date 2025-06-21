@@ -6,6 +6,10 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
@@ -21,30 +25,23 @@
 
 
   
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" title="Go to top">
+  <i class="bi bi-arrow-up-short"></i>
+</button>
 
-
-
-   <!----------------------------------Preloader Section Here--------------------------------->
-
-    <div id="preloader" class="preloader">
-      <p id="loader-text1" class="loader-text1"></p>
-        <img src="./preloader-s-unscreen.gif" alt="">
-        
-
-    </div>
 
 
 
 
 <!----------------------------------Heading Section here---------------------------------------------------->
-        <div class="heading">
+        <div class="heading" >
             <a href="">
                 <img src="./logo.PNG" alt=""> </a>
                 <a href=""><h1>Srinu's Interior Design</h1></a>
                 <a href="#" id="viewNotifyBtn" class="notify"><i class="bi bi-bell" ></i><span id="notifyBadge" class="notify-badge">1</span>
 </a>
                 
-
                 
   <!--------------------------------------NOTIFY section here----------------------------------->
 
@@ -65,8 +62,8 @@
 
 
         <!-----------------------------------Welcome on board section here----------------------------------->
-
-        <div class="welcome">
+        
+        <div class="welcome" data-aos="fade-up" >
             <h1>Welcome to Your Next Dream Space </h1>
             <p>We're excited to design interiors that truly feel like home.</p>
         </div>
@@ -74,7 +71,7 @@
         
 <!------------------------------------Add images section here------------------------------------------->
 
-<div class="slider">
+<div class="slider"  data-aos="zoom-in">
     <div class="slides">
         <img src="./homepage1.JPG" class="slide" alt="Image 1">
         <img src="./homepage2.JPG" class="slide" alt="Image 2">
@@ -97,7 +94,7 @@
 
         <!----------------------------Our team section here--------------------------------------------->
 
-        <div class="ourTeam-container">
+        <div class="ourTeam-container" data-aos="fade-left">
             <h1>Our Team</h1>
             <p>Our team is the heart of everything we do. With a dynamic blend of creative designers, skilled contractors, and experienced project managers, we bring a diverse set of talents and perspectives to every project.
 <br>
@@ -109,7 +106,7 @@ Each team member brings their own unique expertise and dedication to delivering 
 
 <!----------------------------------Down section here---------------------------------------------------->
 
-        <div class="down-section">
+        <div class="down-section" >
 
             <ul>
                 <li><a href="main.html">Home <i class="bi bi-house"></i></a></li>
@@ -126,7 +123,7 @@ Each team member brings their own unique expertise and dedication to delivering 
 
 <!----------------------------------budget-friendly section here---------------------------------------------------->
 
-        <div class="budget-container">
+        <div class="budget-container" data-aos="fade-right">
             <h1>Budget-Friendly</h1>
             <h2>"We do Affordable Interior Design at Market Price".</h2>
             <h3>Transform your space with stylish, budget-friendly interior design solutions.
@@ -140,16 +137,15 @@ Each team member brings their own unique expertise and dedication to delivering 
         </div>
 
 <!-----------------------------------Quality material section here-------------------------------------->
-       <div class="quality-container">
+       <div class="quality-container" data-aos="fade-up">
                     <h1>Quality Materials</h1>
                     <h2>"We use High-Quality Materials for Every Project".</h2>
 
-                    <img src="./adhesives.jpg" alt="" class="adhesives">
-                    <img src="./plywood.jpg" alt="" class="plywood">
-                    <img src="./hardware.jpg" alt="" class="hardware">
-                    <img src="./laminates.jpg" alt="" class="laminates">
-
-                    <h3>
+                    <img src="./adhesives.jpg" class="adhesives" data-aos="zoom-in" data-aos-delay="0" />
+                    <img src="./plywood.jpg" class="plywood" data-aos="zoom-in" data-aos-delay="200" />
+                    <img src="./hardware.jpg" class="hardware" data-aos="zoom-in" data-aos-delay="400" />
+                    <img src="./laminates.jpg" class="laminates" data-aos="zoom-in" data-aos-delay="600" />
+                    <h3  data-aos="fade-up" data-aos-delay="800">
                         At our core, we believe that exceptional interior design begins with two key elements:
                         quality materials and precise execution. Every project we undertake is driven by a commitment
                         to craftsmanship, where each detail is carefully considered and flawlessly executed.
@@ -157,7 +153,7 @@ Each team member brings their own unique expertise and dedication to delivering 
                         we ensure that every aspect of the space reflects durability, elegance, and functionality.
                     </h3>
 
-                    <h4>
+                    <h4  data-aos="fade-up" data-aos-delay="1000">
                         With us, you're not just getting a beautiful space – you're investing in quality,
                         precision, and timeless design.
                     </h4>
@@ -167,7 +163,7 @@ Each team member brings their own unique expertise and dedication to delivering 
         
 
 <!-- Footer Section -->
-<footer class="footer">
+<footer class="footer" data-aos="fade-up">
   <div class="footer-container">
 <h3>Srinu's Interior Design.com</h3>
     <!-- About Us with Dropdown -->
@@ -214,15 +210,14 @@ Each team member brings their own unique expertise and dedication to delivering 
   </div>
 </footer>
 
-
-
-
 </div>
+
+
 
 
  <!---------------------------------- Slide-Up My Partners Modal ---------------------------------->
   
-<div id="teamModal" class="slide-modal">
+<div id="teamModal" class="slide-modal" >
   <button id="closeTeamModal" >&times;</button>
   <h1>MY PARTNERS <i class="bi bi-people"></i></h1>
   <p>"Our team of highly professional contractors brings expertise, precision, and craftsmanship
@@ -361,8 +356,44 @@ Each team member brings their own unique expertise and dedication to delivering 
 
 <!----------------------------------Scripting section here------------------------------------------>
 
+<!-- AOS JS + Scroll-to-Top Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+  duration: 1000,
+  once: false,     // allows re-animation
+  mirror: true,    // allows animation when scrolling UP
+});
 
 
+
+</script>
+
+
+
+
+
+
+
+
+<script>
+   // Scroll to top button logic
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  };
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 
 
