@@ -7,8 +7,6 @@ body{
     background-color: #f0efef;
     overflow-y: scroll;
     overflow-y: visible;
-     padding-top: 0px; 
-  
 }
 
 html {
@@ -1141,7 +1139,27 @@ body.modal-open {
 
 
 @media only screen and (max-width: 600px) {
+    
+body{
 
+    background-color: #f0efef;
+    overflow-y: scroll;
+    overflow-y: visible;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
 
 
     .container{
@@ -1149,6 +1167,7 @@ body.modal-open {
         margin-left: -8px;
        overflow-x: hidden;
        overflow-y: visible;
+       overflow-y: scroll;
         border: none;
         width: 390px;
         height: auto;
